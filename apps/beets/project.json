@@ -28,7 +28,8 @@
       "configurations": {
         "development": {
           "buildTarget": "beets:build:development",
-          "dev": true
+          "dev": true,
+          "port": 4201
         },
         "production": {
           "buildTarget": "beets:build:production",
