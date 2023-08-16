@@ -1,7 +1,7 @@
 {
-  "name": "bb-nx",
+  "name": "balancer",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/bb-nx",
+  "sourceRoot": "apps/balancer",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,11 +9,11 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/bb-nx"
+        "outputPath": "dist/apps/balancer"
       },
       "configurations": {
         "development": {
-          "outputPath": "apps/bb-nx"
+          "outputPath": "apps/balancer"
         },
         "production": {}
       }
@@ -22,16 +22,16 @@
       "executor": "@nx/next:server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "bb-nx:build",
+        "buildTarget": "balancer:build",
         "dev": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "bb-nx:build:development",
+          "buildTarget": "balancer:build:development",
           "dev": true
         },
         "production": {
-          "buildTarget": "bb-nx:build:production",
+          "buildTarget": "balancer:build:production",
           "dev": false
         }
       }
@@ -39,14 +39,14 @@
     "export": {
       "executor": "@nx/next:export",
       "options": {
-        "buildTarget": "bb-nx:build:production"
+        "buildTarget": "balancer:build:production"
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/bb-nx/jest.config.ts",
+        "jestConfig": "apps/balancer/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -60,7 +60,7 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/bb-nx/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/balancer/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },
