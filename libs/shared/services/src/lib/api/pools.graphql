@@ -1,0 +1,97 @@
+query GetPools(
+  $first: Int
+  $skip: Int
+  $orderBy: GqlPoolOrderBy
+  $orderDirection: GqlPoolOrderDirection
+  $where: GqlPoolFilter
+) {
+  pools: poolGetPools(
+    first: $first
+    skip: $skip
+    orderBy: $orderBy
+    orderDirection: $orderDirection
+    where: $where
+  ) {
+    address
+    chain
+    createTime
+    decimals
+    displayTokens {
+      address
+      symbol
+    }
+    dynamicData {
+      totalLiquidity
+      lifetimeVolume
+      lifetimeSwapFees
+      volume24h
+      fees24h
+      holdersCount
+      swapFee
+      swapsCount
+      apr {
+        apr {
+          ... on GqlPoolAprTotal {
+            total
+          }
+          ... on GqlPoolAprRange {
+            min
+            max
+          }
+        }
+        hasRewardApr
+        thirdPartyApr {
+          ... on GqlPoolAprTotal {
+            total
+          }
+          ... on GqlPoolAprRange {
+            min
+            max
+          }
+        }
+        nativeRewardApr {
+          ... on GqlPoolAprTotal {
+            total
+          }
+          ... on GqlPoolAprRange {
+            min
+            max
+          }
+        }
+        swapApr
+        items {
+          id
+          title
+          apr {
+            ... on GqlPoolAprTotal {
+              total
+            }
+            ... on GqlPoolAprRange {
+              min
+              max
+            }
+          }
+          subItems {
+            id
+            title
+            apr {
+              ... on GqlPoolAprTotal {
+                total
+              }
+              ... on GqlPoolAprRange {
+                min
+                max
+              }
+            }
+          }
+        }
+      }
+    }
+    factory
+    id
+    name
+    owner
+    symbol
+    type
+  }
+}
