@@ -9,7 +9,14 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/balancer"
+        "outputPath": "dist/apps/balancer",
+        "assets": [
+          {
+            "input": "libs/shared/assets/src/lib",
+            "glob": "**/*",
+            "output": "./"
+          }
+        ]
       },
       "configurations": {
         "development": {
