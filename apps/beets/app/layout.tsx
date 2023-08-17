@@ -3,7 +3,7 @@ import { Providers } from './providers';
 import { Navbar } from '@bb-nx/shared/components';
 
 export const metadata: Metadata = {
-  title: 'Balancer DeFi Liquidity Pools',
+  title: 'BeethovenX DeFi Liquidity Pools',
   description: `
     Explore DeFi liquidity pools or create your own.
     Provide liquidity to accumulate yield from swap fees

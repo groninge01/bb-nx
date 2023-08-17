@@ -11,6 +11,7 @@
       "options": {
         "outputPath": "dist/apps/beets",
         "assets": [
+          "apps/beets/favicon.ico",
           {
             "input": "libs/shared/assets/src/lib",
             "glob": "**/*",
