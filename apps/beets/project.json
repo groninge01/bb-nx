@@ -9,7 +9,14 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/beets"
+        "outputPath": "dist/apps/beets",
+        "assets": [
+          {
+            "input": "libs/shared/assets/src/lib",
+            "glob": "**/*",
+            "output": "./"
+          }
+        ]
       },
       "configurations": {
         "development": {
