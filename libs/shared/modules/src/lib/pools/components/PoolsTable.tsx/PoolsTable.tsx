@@ -1,5 +1,3 @@
-'use client';
-
 import { getColumns } from './columns';
 import { PoolsListQuery, PoolsListItem } from '../../pool.types';
 import { Box } from '@chakra-ui/react';

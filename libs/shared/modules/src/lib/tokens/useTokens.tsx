@@ -1,5 +1,3 @@
-'use client';
-
 import { GetTokensDocument, GqlToken } from '@bb-nx/shared/services';
 import { createContext, PropsWithChildren, useContext } from 'react';
 import { useQuery } from '@apollo/experimental-nextjs-app-support/ssr';

@@ -1,5 +1,3 @@
-'use client';
-
 import { ColumnDef } from '@tanstack/react-table';
 import numeral from 'numeral';
 import Image from 'next/image';
