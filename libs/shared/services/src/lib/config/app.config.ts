@@ -10,6 +10,7 @@ export interface NetworkConfig {
 interface Config {
   appEnv: 'dev' | 'staging' | 'prod';
   apiUrl: string;
+  protocol: string;
   network: {
     [key in GqlChain]: NetworkConfig;
   };
@@ -18,6 +19,7 @@ interface Config {
 export const config: Config = {
   appEnv: (process.env.NEXT_PUBLIC_APP_ENV as Config['appEnv']) || 'dev',
   apiUrl: process.env.NEXT_PUBLIC_BALANCER_API_URL || '',
+  protocol: process.env.NEXT_PUBLIC_PROTOCOL || 'balancer',
   network: {
     [GqlChain.Arbitrum]: {
       chainId: 42161,
