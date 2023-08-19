@@ -1,9 +1,6 @@
 import { TokensProvider, Web3Provider } from '@bb-nx/shared/modules';
-import {
-  ApolloProviderWrapper,
-  ThemeProvider,
-  COLOR_MODE_STORAGE_KEY,
-} from '@bb-nx/shared/services';
+import { ApolloProviderWrapper, ThemeProvider } from '@bb-nx/shared/services';
+import { COLOR_MODE_STORAGE_KEY } from '@bb-nx/shared/constants';
 import { ReactNode } from 'react';
 import { cookies } from 'next/headers';
 
